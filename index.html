@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html>
+<head>
+            <style>.lw { font-size: 60px; }</style>
+        </head>
+        <body>
+            
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaimes Abogados Asociados - Especialistas en Derecho Administrativo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --color-primary: #C41E3A;
+      --color-secondary: #8B1A32;
+      --color-dark: #1A1A1A;
+      --color-gray: #666666;
+      --color-light-gray: #F8F9FA;
+      --color-white: #FFFFFF;
+      --color-gold: #D4AF37;
+      --color-success: #10B981;
+      --color-warning: #F59E0B;
+      
+      --font-display: 'Playfair Display', serif;
+      --font-body: 'Inter', sans-serif;
+      
+      --spacing-xs: 0.5rem;
+      --spacing-sm: 1rem;
+      --spacing-md: 2rem;
+      --spacing-lg: 4rem;
+      --spacing-xl: 6rem;
+      --spacing-2xl: 8rem;
+      
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 8px 25px rgba(0,0,0,0.15);
+      --shadow-lg: 0 15px 35px rgba(0,0,0,0.1);
+      --shadow-xl: 0 25px 50px rgba(0,0,0,0.2);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-body);
+      line-height: 1.6;
+      color: var(--color-dark);
+      overflow-x: hidden;
+    }
+
+    /* HEADER & NAVIGATION */
+    .header {
+      background: var(--color-white);
+      box-shadow: var(--shadow-sm);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    .header.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--spacing-sm);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 90px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    
+    .logo img {
+      height: 70px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+    
+    .logo:hover img {
+      transform: scale(1.05);
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: var(--spacing-md);
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: var(--color-dark);
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-menu a:hover {
+      color: var(--color-primary);
+    }
+
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--color-primary);
+      transition: width 0.3s ease;
+    }
+
+    .nav-menu a:hover::after {
+      width: 100%;
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--color-dark);
+      cursor: pointer;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-secondary) 100%);
+      color: var(--color-white);
+      padding: calc(90px + var(--spacing-xl)) var(--spacing-sm) var(--spacing-xl);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      opacity: 0.3;
+    }
+
+    .hero-container {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      margin-bottom: var(--spacing-sm);
+      line-height: 1.1;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      margin-bottom: var(--spacing-md);
+      opacity: 0.9;
+      font-weight: 300;
+    }
+
+    /* ESTADÍSTICAS ÚNICAS DEL DESPACHO */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--spacing-md);
+      margin: var(--spacing-lg) 0;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: var(--spacing-md);
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      margin-top: var(--spacing-xs);
+    }
+
+    .cta-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+      background: var(--color-primary);
+      color: var(--color-white);
+      padding: var(--spacing-sm) var(--spacing-md);
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-top: var(--spacing-md);
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 25px rgba(196, 30, 58, 0.3);
+    }
+
+    .cta-primary:hover {
+      background: var(--color-secondary);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(196, 30, 58, 0.4);
+    }
+
+    /* SECCIÓN EQUIPO */
+    .section {
+      padding: var(--spacing-xl) var(--spacing-sm);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: var(--spacing-sm);
+      color: var(--color-dark);
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      color: var(--color-gray);
+      margin-bottom: var(--spacing-lg);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-lg);
+      margin-top: var(--spacing-lg);
+    }
+
+    /* TARJETA DE EQUIPO ÚNICA */
+    .team-card {
+      background: var(--color-white);
+      border-radius: 20px;
+      padding: var(--spacing-lg);
+      box-shadow: var(--shadow-lg);
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .team-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-gold));
+      transform: translateX(-100%);
+      transition: transform 0.5s ease;
+    }
+
+    .team-card:hover::before {
+      transform: translateX(0);
+    }
+
+    .team-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .member-name {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .member-title {
+      font-weight: 600;
+      color: var(--color-gray);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .member-experience {
+      background: var(--color-light-gray);
+      padding: var(--spacing-xs) var(--spacing-sm);
+      border-radius: 25px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--color-primary);
+      display: inline-block;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .member-description {
+      color: var(--color-gray);
+      line-height: 1.6;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    /* ÁREAS DE PRÁCTICA */
+    .practice-areas {
+      background: var(--color-light-gray);
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: var(--spacing-lg);
+    }
+
+    /* TARJETA DE ÁREA LEGAL PERSONALIZADA */
+    .area-card {
+      background: var(--color-white);
+      border-radius: 20px;
+      padding: var(--spacing-lg);
+      box-shadow: var(--shadow-md);
+      transition: all 0.3s ease;
+      position: relative;
+      border-left: 5px solid var(--color-primary);
+    }
+
+    .area-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+      border-left-color: var(--color-gold);
+    }
+
+    .area-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-white);
+      font-size: 1.5rem;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .area-title {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--color-dark);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .area-description {
+      color: var(--color-gray);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .area-specialties {
+      list-style: none;
+    }
+
+    .area-specialties li {
+      padding: var(--spacing-xs) 0;
+      color: var(--color-gray);
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .area-specialties li::before {
+      content: '⚖️';
+      position: absolute;
+      left: 0;
+      color: var(--color-primary);
+    }
+
+    /* CALCULADORA DE VIABILIDAD ÚNICA */
+    .case-calculator {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      color: var(--color-white);
+      padding: var(--spacing-xl) var(--spacing-sm);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .calculator-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .calculator-title {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .calculator-form {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: var(--spacing-lg);
+      margin-top: var(--spacing-lg);
+    }
+
+    .form-group {
+      margin-bottom: var(--spacing-md);
+      text-align: left;
+    }
+
+    .form-label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: var(--spacing-xs);
+      color: var(--color-white);
+    }
+
+    .form-select, .form-input {
+      width: 100%;
+      padding: var(--spacing-sm);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--color-white);
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-select:focus, .form-input:focus {
+      outline: none;
+      border-color: var(--color-gold);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .form-select option {
+      background: var(--color-dark);
+      color: var(--color-white);
+    }
+
+    .calculate-btn {
+      background: var(--color-gold);
+      color: var(--color-dark);
+      padding: var(--spacing-sm) var(--spacing-md);
+      border: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: var(--spacing-sm);
+    }
+
+    .calculate-btn:hover {
+      background: #FFD700;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+    }
+
+    .result-display {
+      margin-top: var(--spacing-lg);
+      padding: var(--spacing-md);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      border: 2px solid var(--color-gold);
+      display: none;
+    }
+
+    /* CASOS DE ÉXITO */
+    .success-cases {
+      background: var(--color-white);
+    }
+
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-md);
+    }
+
+    .case-card {
+      background: var(--color-light-gray);
+      border-radius: 15px;
+      padding: var(--spacing-md);
+      transition: all 0.3s ease;
+      border-left: 4px solid var(--color-primary);
+    }
+
+    .case-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .case-category {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .case-title {
+      font-weight: 600;
+      color: var(--color-dark);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .case-result {
+      color: var(--color-success);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    /* FORMULARIO DE CONTACTO LEGAL */
+    .contact-form {
+      background: var(--color-white);
+    }
+
+    .form-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--color-light-gray);
+      border-radius: 20px;
+      padding: var(--spacing-lg);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-md);
+    }
+
+    .form-field {
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .form-label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: var(--spacing-xs);
+      color: var(--color-dark);
+    }
+
+    .form-field.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .contact-input, .contact-select, .contact-textarea {
+      width: 100%;
+      padding: var(--spacing-sm);
+      border: 2px solid #E5E7EB;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .contact-input:focus, .contact-select:focus, .contact-textarea:focus {
+      outline: none;
+      border-color: var(--color-primary);
+    }
+
+    .contact-textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      background: var(--color-primary);
+      color: var(--color-white);
+      padding: var(--spacing-sm) var(--spacing-lg);
+      border: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+    }
+
+    .submit-btn:hover {
+      background: var(--color-secondary);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(196, 30, 58, 0.3);
+    }
+
+    /* INFORMACIÓN DE CONTACTO */
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--spacing-lg);
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .info-card {
+      background: var(--color-white);
+      padding: var(--spacing-md);
+      border-radius: 15px;
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+    }
+
+    .info-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--color-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-white);
+      margin: 0 auto var(--spacing-sm);
+      font-size: 1.2rem;
+    }
+
+    /* WHATSAPP FLOTANTE PERSONALIZADO */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.8rem;
+      text-decoration: none;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+      z-index: 1000;
+      transition: all 0.3s ease;
+      animation: whatsapp-pulse 2s infinite;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+    }
+
+    @keyframes whatsapp-pulse {
+      0% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); }
+      50% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6), 0 0 0 10px rgba(37, 211, 102, 0.1); }
+      100% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); }
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--color-dark);
+      color: var(--color-white);
+      padding: var(--spacing-lg) var(--spacing-sm) var(--spacing-md);
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .footer-logo img {
+      height: 60px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      opacity: 0.9;
+    }
+
+    .footer-text {
+      opacity: 0.8;
+      margin-bottom: var(--spacing-md);
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-sm);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      background: var(--color-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: var(--color-gold);
+      transform: translateY(-3px);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-container {
+        height: 80px;
+      }
+      
+      .logo img {
+        height: 55px;
+      }
+      
+      .nav-menu {
+        display: none;
+      }
+      
+      .mobile-menu-toggle {
+        display: block;
+      }
+      
+      .hero {
+        padding: calc(80px + var(--spacing-lg)) var(--spacing-sm) var(--spacing-lg);
+      }
+      
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .areas-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ANIMACIONES DE ENTRADA */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* SCROLL SMOOTH */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <nav class="nav-container">
+      <a href="#" class="logo">
+        <img src="https://i.imgur.com/GlKESrv.png" alt="Jaimes Abogados Asociados SAS">
+      </a>
+      <ul class="nav-menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#areas">Áreas de Práctica</a></li>
+        <li><a href="#casos">Casos de Éxito</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="inicio">
+    <div class="hero-container">
+      <h1 class="hero-title">Defendemos sus Derechos con 45+ Años de Experiencia</h1>
+      <p class="hero-subtitle">Especialistas en Derecho Administrativo y Responsabilidad Civil en Santander</p>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">45+</span>
+          <span class="stat-label">Años de Experiencia</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Casos Exitosos</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">16</span>
+          <span class="stat-label">Años como Conjuez</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Compromiso</span>
+        </div>
+      </div>
+
+      <a href="#contacto" class="cta-primary">
+        <i class="fas fa-gavel"></i>
+        Consulta Gratuita
+      </a>
+    </div>
+  </section>
+
+  <!-- EQUIPO -->
+  <section class="section" id="equipo">
+    <div class="container">
+      <h2 class="section-title fade-in visible">Nuestro Equipo Legal</h2>
+      <p class="section-subtitle fade-in visible">Profesionales con trayectoria excepcional en derecho administrativo y civil</p>
+      
+      <div class="team-grid">
+        <div class="team-card fade-in visible">
+          <h3 class="member-name">Isnardo Jaimes Jaimes</h3>
+          <p class="member-title">Socio Fundador</p>
+          <span class="member-experience">45+ años de experiencia</span>
+          <p class="member-description">
+            Especialista en Derecho Privado, Público, Constitucional y Contratación Estatal. 
+            Magíster en Derecho Público. Ex-Conjuez del Tribunal Administrativo de Santander por 16 años, 
+            Ex-Procurador Delegado y Ex-Director de Maestría UDES.
+          </p>
+        </div>
+
+        <div class="team-card fade-in visible">
+          <h3 class="member-name">Silvia Juliana Jaimes Ochoa</h3>
+          <p class="member-title">Socia</p>
+          <span class="member-experience">21+ años de experiencia</span>
+          <p class="member-description">
+            Especializada en Derecho Público, Responsabilidad y Daño Resarcible, Contratación Estatal 
+            y Derecho Probatorio. Ex-Conjuez del Tribunal Administrativo de Santander durante 2 años.
+          </p>
+        </div>
+
+        <div class="team-card fade-in visible">
+          <h3 class="member-name">Johanna Paola Vega Blanco</h3>
+          <p class="member-title">Asociada</p>
+          <span class="member-experience">16+ años de experiencia</span>
+          <p class="member-description">
+            Especializada en Responsabilidad y Daño Resarcible. Amplia experiencia en casos de 
+            responsabilidad civil y administrativa.
+          </p>
+        </div>
+
+        <div class="team-card fade-in visible">
+          <h3 class="member-name">Gindy Michell Rojas Vega</h3>
+          <p class="member-title">Asociada</p>
+          <span class="member-experience">5+ años de experiencia</span>
+          <p class="member-description">
+            Especializada en Derecho Civil y Derecho Administrativo. Apoyo integral en casos 
+            contenciosos y asesoría legal.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÁREAS DE PRÁCTICA -->
+  <section class="section practice-areas" id="areas">
+    <div class="container">
+      <h2 class="section-title fade-in visible">Áreas de Especialización</h2>
+      <p class="section-subtitle fade-in visible">Expertos en las áreas más complejas del derecho colombiano</p>
+      
+      <div class="areas-grid">
+        <div class="area-card fade-in visible">
+          <div class="area-icon">
+            <i class="fas fa-university"></i>
+          </div>
+          <h3 class="area-title">Derecho Administrativo</h3>
+          <p class="area-description">Nuestra especialidad principal con décadas de experiencia</p>
+          <ul class="area-specialties">
+            <li>Contratación Pública</li>
+            <li>Responsabilidad Fiscal</li>
+            <li>Derecho Electoral</li>
+            <li>Nulidad y Restablecimiento de Actos</li>
+            <li>Reparación Directa</li>
+          </ul>
+        </div>
+
+        <div class="area-card fade-in visible">
+          <div class="area-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3 class="area-title">Responsabilidad Civil</h3>
+          <p class="area-description">Defensa integral en casos de responsabilidad civil</p>
+          <ul class="area-specialties">
+            <li>Responsabilidad Extracontractual</li>
+            <li>Responsabilidad Contractual</li>
+            <li>Accidentes de Tránsito</li>
+            <li>Responsabilidad Médica</li>
+            <li>Daños y Perjuicios</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULADORA DE VIABILIDAD -->
+  <section class="case-calculator">
+    <div class="calculator-container">
+      <h2 class="calculator-title">Evaluación Preliminar de Viabilidad</h2>
+      <p style="opacity: 0.9; margin-bottom: 2rem;">Análisis inicial basado en términos legales colombianos</p>
+      
+      <form class="calculator-form" id="caseCalculator">
+        <div class="form-group">
+          <label class="form-label">Tipo de Caso</label>
+          <select class="form-select" id="caseType">
+            <option value="">Seleccione el tipo de caso</option>
+            <option value="administrativo">Contra el Estado (Responsabilidad Administrativa)</option>
+            <option value="civil">Entre Particulares (Responsabilidad Civil)</option>
+            <option value="contractual">Incumplimiento de Contrato Estatal</option>
+            <option value="electoral">Nulidad Electoral</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">¿Cuándo ocurrieron los hechos principales?</label>
+          <select class="form-select" id="timeFrame">
+            <option value="">Seleccione el tiempo</option>
+            <option value="reciente">Menos de 1 año</option>
+            <option value="intermedio">1-2 años</option>
+            <option value="limite">2-3 años</option>
+            <option value="prescrito">Más de 3 años</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">¿Tiene documentos que prueben los hechos?</label>
+          <select class="form-select" id="hasEvidence">
+            <option value="">Seleccione</option>
+            <option value="completa">Sí, documentación completa</option>
+            <option value="parcial">Documentación parcial</option>
+            <option value="limitada">Pocos documentos</option>
+            <option value="ninguna">No tengo documentos</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">¿Hubo daño económico cuantificable?</label>
+          <select class="form-select" id="economicDamage">
+            <option value="">Seleccione</option>
+            <option value="alto">Sí, daño significativo (más de 50 SMMLV)</option>
+            <option value="medio">Daño moderado (10-50 SMMLV)</option>
+            <option value="bajo">Daño menor (menos de 10 SMMLV)</option>
+            <option value="moral">Solo daño moral/extrapatrimonial</option>
+          </select>
+        </div>
+        
+        <button type="button" class="calculate-btn" onclick="calculateLegalViability()">
+          Evaluar Viabilidad Legal
+        </button>
+        
+        <div class="result-display" id="resultDisplay" style="display: block;">
+          <h3 style="color: var(--color-gold); margin-bottom: 1rem;">Evaluación Preliminar</h3>
+          <div id="resultContent">
+        <div style="color: #F59E0B; font-weight: 600; margin-bottom: 1rem; font-size: 1.1rem;">
+          ⚠️ EVALUACIÓN: VIABLE
+        </div>
+      
+          <div style="margin-bottom: 1rem;">
+            <h4 style="color: var(--color-gold); margin-bottom: 0.5rem;">Consideraciones Legales:</h4>
+            <p style="margin-bottom: 0.5rem; font-size: 0.95rem;">🚨 TÉRMINO CRÍTICO: Se acerca el término de prescripción de 2 años</p>
+          </div>
+        
+          <div style="margin-bottom: 1rem;">
+            <h4 style="color: var(--color-gold); margin-bottom: 0.5rem;">Recomendaciones:</h4>
+            <p style="margin-bottom: 0.5rem; font-size: 0.95rem;">• Acción legal inmediata requerida</p>
+          </div>
+        
+        <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 10px; font-size: 0.9rem;">
+          <p style="margin-bottom: 0.5rem;"><strong>IMPORTANTE:</strong></p>
+          <p>Esta es una evaluación preliminar basada en criterios legales generales. Cada caso tiene particularidades específicas que solo pueden determinarse en consulta presencial con análisis detallado de documentos y hechos.</p>
+          <div style="margin-top: 1rem; padding: 0.75rem; background: var(--color-gold); color: var(--color-dark); border-radius: 8px; text-align: center; font-weight: 600;">
+            📞 AGENDE SU CONSULTA PRESENCIAL GRATUITA
+          </div>
+        </div>
+      </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- CASOS DE ÉXITO -->
+  <section class="section success-cases" id="casos">
+    <div class="container">
+      <h2 class="section-title fade-in visible">Casos de Éxito Destacados</h2>
+      <p class="section-subtitle fade-in visible">Resultados exitosos que respaldan nuestra experiencia</p>
+      
+      <div class="cases-grid">
+        <div class="case-card fade-in visible">
+          <div class="case-category">Responsabilidad Civil</div>
+          <h4 class="case-title">Accidentes de Tránsito</h4>
+          <p class="case-result">Múltiples casos exitosos con indemnizaciones completas</p>
+        </div>
+
+        <div class="case-card fade-in visible">
+          <div class="case-category">Derecho Administrativo</div>
+          <h4 class="case-title">Nulidad Electoral</h4>
+          <p class="case-result">Alcaldes de Floridablanca, Sabana y San Gil</p>
+        </div>
+
+        <div class="case-card fade-in visible">
+          <div class="case-category">Reparación Directa</div>
+          <h4 class="case-title">Falsos Positivos</h4>
+          <p class="case-result">Demandas exitosas contra el Ejército Nacional</p>
+        </div>
+
+        <div class="case-card fade-in visible">
+          <div class="case-category">Responsabilidad Médica</div>
+          <h4 class="case-title">Negligencia Médica</h4>
+          <p class="case-result">Casos resueltos favorablemente con indemnización</p>
+        </div>
+
+        <div class="case-card fade-in visible">
+          <div class="case-category">Privación Injusta</div>
+          <h4 class="case-title">Casos contra Fiscalía</h4>
+          <p class="case-result">Múltiples casos ganados con reparación integral</p>
+        </div>
+
+        <div class="case-card fade-in visible">
+          <div class="case-category">Desvinculación</div>
+          <h4 class="case-title">Personal Público</h4>
+          <p class="case-result">Reintegros y indemnizaciones exitosas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section contact-form" id="contacto">
+    <div class="container">
+      <h2 class="section-title fade-in visible">Consulta Gratuita</h2>
+      <p class="section-subtitle fade-in visible">Contáctenos para evaluar su caso sin compromiso</p>
+      
+      <div class="contact-info">
+        <div class="info-card fade-in visible">
+          <div class="info-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h4>Ubicación</h4>
+          <p>Carrera 14 # 35 – 26 Oficina 201<br>Bucaramanga, Santander</p>
+        </div>
+        
+        <div class="info-card fade-in visible">
+          <div class="info-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h4>Teléfonos</h4>
+          <p>315-798-4808<br>(607) 684-4632</p>
+        </div>
+        
+        <div class="info-card fade-in visible">
+          <div class="info-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h4>Horarios</h4>
+          <p>Lunes a Viernes: 8am-12pm / 2pm-6pm<br>Sábados: 9am-12pm</p>
+        </div>
+      </div>
+      
+      <div class="form-container fade-in visible">
+        <form id="contactForm">
+          <div class="contact-grid">
+            <div class="form-field">
+              <label class="form-label">Nombre Completo</label>
+              <input type="text" class="contact-input" required="">
+            </div>
+            
+            <div class="form-field">
+              <label class="form-label">Teléfono</label>
+              <input type="tel" class="contact-input" required="">
+            </div>
+            
+            <div class="form-field">
+              <label class="form-label">Email</label>
+              <input type="email" class="contact-input" required="">
+            </div>
+            
+            <div class="form-field">
+              <label class="form-label">Tipo de Consulta</label>
+              <select class="contact-select" required="">
+                <option value="">Seleccione</option>
+                <option value="administrativo">Derecho Administrativo</option>
+                <option value="civil">Responsabilidad Civil</option>
+                <option value="electoral">Derecho Electoral</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            
+            <div class="form-field full-width">
+              <label class="form-label">Describa su Caso</label>
+              <textarea class="contact-textarea" placeholder="Proporcione detalles específicos sobre su situación legal..." required=""></textarea>
+            </div>
+          </div>
+          
+          <button type="submit" class="submit-btn">
+            Enviar Consulta
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="https://i.imgur.com/GlKESrv.png" alt="Jaimes Abogados Asociados SAS">
+      </div>
+      <p class="footer-text">Defendiendo sus derechos con experiencia y profesionalismo</p>
+      
+      <div class="social-links">
+        <a href="https://www.instagram.com/jaimesabogadosasociados" class="social-link" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="http://wa.me/573157984808" class="social-link" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+      
+      <p style="opacity: 0.6; font-size: 0.9rem;">
+        © 2024 Jaimes Abogados Asociados SAS. Todos los derechos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOTANTE -->
+  <a href="http://wa.me/573157984808?text=Hola,%20quisiera%20una%20consulta%20legal%20gratuita" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    // HEADER SCROLL EFFECT
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // FADE IN ANIMATION
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // CALCULADORA DE VIABILIDAD LEGAL REAL
+    function calculateLegalViability() {
+      const caseType = document.getElementById('caseType').value;
+      const timeFrame = document.getElementById('timeFrame').value;
+      const hasEvidence = document.getElementById('hasEvidence').value;
+      const economicDamage = document.getElementById('economicDamage').value;
+      
+      if (!caseType || !timeFrame || !hasEvidence || !economicDamage) {
+        alert('Por favor complete todos los campos para la evaluación');
+        return;
+      }
+      
+      const resultDisplay = document.getElementById('resultDisplay');
+      const resultContent = document.getElementById('resultContent');
+      
+      let alerts = [];
+      let viability = 'VIABLE';
+      let recommendations = [];
+      
+      // EVALUACIÓN DE PRESCRIPCIÓN (CRITERIO REAL MÁS IMPORTANTE)
+      if (caseType === 'administrativo' || caseType === 'contractual') {
+        if (timeFrame === 'prescrito') {
+          alerts.push('⚠️ PROBABLE PRESCRIPCIÓN: Las demandas contra el Estado prescriben en 2 años (Art. 164 CPACA)');
+          viability = 'REQUIERE ANÁLISIS URGENTE';
+        } else if (timeFrame === 'limite') {
+          alerts.push('🚨 TÉRMINO CRÍTICO: Se acerca el término de prescripción de 2 años');
+          recommendations.push('Acción legal inmediata requerida');
+        }
+      } else if (caseType === 'civil') {
+        if (timeFrame === 'prescrito') {
+          alerts.push('⚠️ PROBABLE PRESCRIPCIÓN: Responsabilidad civil prescribe en 3 años (Art. 2536 C.C.)');
+          viability = 'REQUIERE ANÁLISIS URGENTE';
+        }
+      } else if (caseType === 'electoral') {
+        if (timeFrame !== 'reciente') {
+          alerts.push('⚠️ TÉRMINO VENCIDO: Nulidades electorales tienen términos muy específicos');
+          viability = 'REQUIERE ANÁLISIS URGENTE';
+        }
+      }
+      
+      // EVALUACIÓN DE PRUEBAS
+      if (hasEvidence === 'ninguna') {
+        alerts.push('⚠️ PRUEBAS INSUFICIENTES: Sin documentación será difícil probar los hechos');
+        recommendations.push('Recopilar toda la documentación posible antes de proceder');
+      } else if (hasEvidence === 'limitada') {
+        recommendations.push('Fortalecer el acervo probatorio con documentos adicionales');
+      }
+      
+      // EVALUACIÓN ECONÓMICA
+      if (economicDamage === 'bajo' && caseType === 'administrativo') {
+        recommendations.push('Evaluar costo-beneficio: demandas de menor cuantía pueden no ser rentables');
+      } else if (economicDamage === 'moral') {
+        recommendations.push('Casos de daño moral requieren prueba específica del perjuicio extrapatrimonial');
+      }
+      
+      // GENERAR RESULTADO
+      let resultColor = '#10B981'; // Verde
+      let resultIcon = '✅';
+      
+      if (viability === 'REQUIERE ANÁLISIS URGENTE') {
+        resultColor = '#EF4444'; // Rojo
+        resultIcon = '🚨';
+      } else if (alerts.length > 0) {
+        resultColor = '#F59E0B'; // Amarillo
+        resultIcon = '⚠️';
+      }
+      
+      let resultHTML = `
+        <div style="color: ${resultColor}; font-weight: 600; margin-bottom: 1rem; font-size: 1.1rem;">
+          ${resultIcon} EVALUACIÓN: ${viability}
+        </div>
+      `;
+      
+      if (alerts.length > 0) {
+        resultHTML += `
+          <div style="margin-bottom: 1rem;">
+            <h4 style="color: var(--color-gold); margin-bottom: 0.5rem;">Consideraciones Legales:</h4>
+            ${alerts.map(alert => `<p style="margin-bottom: 0.5rem; font-size: 0.95rem;">${alert}</p>`).join('')}
+          </div>
+        `;
+      }
+      
+      if (recommendations.length > 0) {
+        resultHTML += `
+          <div style="margin-bottom: 1rem;">
+            <h4 style="color: var(--color-gold); margin-bottom: 0.5rem;">Recomendaciones:</h4>
+            ${recommendations.map(rec => `<p style="margin-bottom: 0.5rem; font-size: 0.95rem;">• ${rec}</p>`).join('')}
+          </div>
+        `;
+      }
+      
+      resultHTML += `
+        <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 10px; font-size: 0.9rem;">
+          <p style="margin-bottom: 0.5rem;"><strong>IMPORTANTE:</strong></p>
+          <p>Esta es una evaluación preliminar basada en criterios legales generales. Cada caso tiene particularidades específicas que solo pueden determinarse en consulta presencial con análisis detallado de documentos y hechos.</p>
+          <div style="margin-top: 1rem; padding: 0.75rem; background: var(--color-gold); color: var(--color-dark); border-radius: 8px; text-align: center; font-weight: 600;">
+            📞 AGENDE SU CONSULTA PRESENCIAL GRATUITA
+          </div>
+        </div>
+      `;
+      
+      resultContent.innerHTML = resultHTML;
+      resultDisplay.style.display = 'block';
+      resultDisplay.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // FORMULARIO DE CONTACTO
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Gracias por su consulta. Nos pondremos en contacto con usted dentro de 24 horas.');
+    });
+
+    // SMOOTH SCROLL PARA ENLACES
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+
+
+            <script>// Write JavaScript here</script>
+        
+    
+</body>
