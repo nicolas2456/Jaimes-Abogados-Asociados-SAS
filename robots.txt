@@ -1,0 +1,11 @@
+# robots.txt para Jaimes Abogados Asociados SAS
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://jaimesabogados.com.co/sitemap.xml
+
+# Crawl-delay (opcional, ayuda a no sobrecargar el servidor)
+Crawl-delay: 1
