@@ -77,7 +77,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 90px;
+      height: 100px;
     }
 
     .logo {
@@ -87,7 +87,7 @@
     }
     
     .logo img {
-      height: 70px;
+      height: 88px;
       width: auto;
       transition: transform 0.3s ease;
     }
@@ -140,7 +140,10 @@
 
     /* HERO SECTION */
     .hero {
-      background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-secondary) 100%);
+      background: linear-gradient(135deg, rgba(26, 26, 26, 0.85) 0%, rgba(139, 26, 50, 0.85) 100%), url('https://i.imgur.com/3FQEpk5.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
       color: var(--color-white);
       padding: calc(90px + var(--spacing-xl)) var(--spacing-sm) var(--spacing-xl);
       text-align: center;
@@ -279,11 +282,26 @@
     .team-card {
       background: var(--color-white);
       border-radius: 20px;
-      padding: var(--spacing-lg);
+      padding: 0;
       box-shadow: var(--shadow-lg);
       transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
       position: relative;
       overflow: hidden;
+    }
+
+    .team-member-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: var(--spacing-lg) auto var(--spacing-sm);
+      display: block;
+      border: 4px solid var(--color-light-gray);
+      box-shadow: var(--shadow-md);
+    }
+
+    .team-card-content {
+      padding: 0 var(--spacing-lg) var(--spacing-lg);
     }
 
     .team-card::before {
@@ -740,11 +758,11 @@
     /* RESPONSIVE */
     @media (max-width: 768px) {
       .nav-container {
-        height: 80px;
+        height: 90px;
       }
-      
+
       .logo img {
-        height: 55px;
+        height: 70px;
       }
       
       .nav-menu {
@@ -830,10 +848,6 @@
           <span class="stat-label">Años de Experiencia</span>
         </div>
         <div class="stat-card">
-          <span class="stat-number">500+</span>
-          <span class="stat-label">Casos Exitosos</span>
-        </div>
-        <div class="stat-card">
           <span class="stat-number">16</span>
           <span class="stat-label">Años como Conjuez</span>
         </div>
@@ -845,7 +859,7 @@
 
       <a href="#contacto" class="cta-primary">
         <i class="fas fa-gavel"></i>
-        Consulta Gratuita
+        Consulta Profesional
       </a>
     </div>
   </section>
@@ -858,44 +872,56 @@
       
       <div class="team-grid">
         <div class="team-card fade-in visible">
-          <h3 class="member-name">Isnardo Jaimes Jaimes</h3>
-          <p class="member-title">Socio Fundador</p>
-          <span class="member-experience">45+ años de experiencia</span>
-          <p class="member-description">
-            Especialista en Derecho Privado, Público, Constitucional y Contratación Estatal. 
-            Magíster en Derecho Público. Ex-Conjuez del Tribunal Administrativo de Santander por 16 años, 
-            Ex-Procurador Delegado y Ex-Director de Maestría UDES.
-          </p>
+          <img src="https://i.imgur.com/1wnjcU7.jpeg" alt="Isnardo Jaimes Jaimes" class="team-member-image">
+          <div class="team-card-content">
+            <h3 class="member-name">Isnardo Jaimes Jaimes</h3>
+            <p class="member-title">Socio Fundador</p>
+            <span class="member-experience">45+ años de experiencia</span>
+            <p class="member-description">
+              Especialista en Derecho Privado, Público, Constitucional y Contratación Estatal.
+              Magíster en Derecho Público. Ex-Conjuez del Tribunal Administrativo de Santander por 16 años,
+              Ex-Procurador Delegado y Ex-Director de Maestría UDES.
+            </p>
+          </div>
         </div>
 
         <div class="team-card fade-in visible">
-          <h3 class="member-name">Silvia Juliana Jaimes Ochoa</h3>
-          <p class="member-title">Socia</p>
-          <span class="member-experience">21+ años de experiencia</span>
-          <p class="member-description">
-            Especializada en Derecho Público, Responsabilidad y Daño Resarcible, Contratación Estatal 
-            y Derecho Probatorio. Ex-Conjuez del Tribunal Administrativo de Santander durante 2 años.
-          </p>
+          <img src="https://i.imgur.com/mMPacr1.jpeg" alt="Silvia Juliana Jaimes Ochoa" class="team-member-image">
+          <div class="team-card-content">
+            <h3 class="member-name">Silvia Juliana Jaimes Ochoa</h3>
+            <p class="member-title">Socia</p>
+            <span class="member-experience">21+ años de experiencia</span>
+            <p class="member-description">
+              Especializada en Derecho Público, Responsabilidad y Daño Resarcible, Contratación Estatal
+              y Derecho Probatorio. Ex-Conjuez del Tribunal Administrativo de Santander durante 2 años.
+            </p>
+          </div>
         </div>
 
         <div class="team-card fade-in visible">
-          <h3 class="member-name">Johanna Paola Vega Blanco</h3>
-          <p class="member-title">Asociada</p>
-          <span class="member-experience">16+ años de experiencia</span>
-          <p class="member-description">
-            Especializada en Responsabilidad y Daño Resarcible. Amplia experiencia en casos de 
-            responsabilidad civil y administrativa.
-          </p>
+          <img src="https://i.imgur.com/iCR2zm8.jpeg" alt="Johanna Paola Vega Blanco" class="team-member-image">
+          <div class="team-card-content">
+            <h3 class="member-name">Johanna Paola Vega Blanco</h3>
+            <p class="member-title">Asociada</p>
+            <span class="member-experience">16+ años de experiencia</span>
+            <p class="member-description">
+              Especializada en Responsabilidad y Daño Resarcible. Amplia experiencia en casos de
+              responsabilidad civil y administrativa.
+            </p>
+          </div>
         </div>
 
         <div class="team-card fade-in visible">
-          <h3 class="member-name">Gindy Michell Rojas Vega</h3>
-          <p class="member-title">Asociada</p>
-          <span class="member-experience">5+ años de experiencia</span>
-          <p class="member-description">
-            Especializada en Derecho Civil y Derecho Administrativo. Apoyo integral en casos 
-            contenciosos y asesoría legal.
-          </p>
+          <img src="https://i.imgur.com/FRBLLWq.png" alt="Gindy Michell Rojas Vega" class="team-member-image">
+          <div class="team-card-content">
+            <h3 class="member-name">Gindy Michell Rojas Vega</h3>
+            <p class="member-title">Asociada</p>
+            <span class="member-experience">5+ años de experiencia</span>
+            <p class="member-description">
+              Especializada en Derecho Civil y Derecho Administrativo. Apoyo integral en casos
+              contenciosos y asesoría legal.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -1016,9 +1042,9 @@
         <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 10px; font-size: 0.9rem;">
           <p style="margin-bottom: 0.5rem;"><strong>IMPORTANTE:</strong></p>
           <p>Esta es una evaluación preliminar basada en criterios legales generales. Cada caso tiene particularidades específicas que solo pueden determinarse en consulta presencial con análisis detallado de documentos y hechos.</p>
-          <div style="margin-top: 1rem; padding: 0.75rem; background: var(--color-gold); color: var(--color-dark); border-radius: 8px; text-align: center; font-weight: 600;">
-            📞 AGENDE SU CONSULTA PRESENCIAL GRATUITA
-          </div>
+          <a href="http://wa.me/573157984808?text=Hola,%20realicé%20la%20evaluación%20preliminar%20en%20su%20página%20web%20y%20quisiera%20agendar%20una%20consulta%20presencial%20para%20analizar%20mi%20caso." target="_blank" style="display: block; margin-top: 1rem; padding: 0.75rem; background: var(--color-gold); color: var(--color-dark); border-radius: 8px; text-align: center; font-weight: 600; text-decoration: none; cursor: pointer;">
+            📞 AGENDE SU CONSULTA PRESENCIAL
+          </a>
         </div>
       </div>
         </div>
@@ -1075,7 +1101,7 @@
   <!-- CONTACTO -->
   <section class="section contact-form" id="contacto">
     <div class="container">
-      <h2 class="section-title fade-in visible">Consulta Gratuita</h2>
+      <h2 class="section-title fade-in visible">Consulta Profesional</h2>
       <p class="section-subtitle fade-in visible">Contáctenos para evaluar su caso sin compromiso</p>
       
       <div class="contact-info">
@@ -1109,22 +1135,22 @@
           <div class="contact-grid">
             <div class="form-field">
               <label class="form-label">Nombre Completo</label>
-              <input type="text" class="contact-input" required="">
+              <input type="text" class="contact-input" id="contactName" required="">
             </div>
-            
+
             <div class="form-field">
               <label class="form-label">Teléfono</label>
-              <input type="tel" class="contact-input" required="">
+              <input type="tel" class="contact-input" id="contactPhone" required="">
             </div>
-            
+
             <div class="form-field">
               <label class="form-label">Email</label>
-              <input type="email" class="contact-input" required="">
+              <input type="email" class="contact-input" id="contactEmail" required="">
             </div>
-            
+
             <div class="form-field">
               <label class="form-label">Tipo de Consulta</label>
-              <select class="contact-select" required="">
+              <select class="contact-select" id="contactType" required="">
                 <option value="">Seleccione</option>
                 <option value="administrativo">Derecho Administrativo</option>
                 <option value="civil">Responsabilidad Civil</option>
@@ -1132,10 +1158,10 @@
                 <option value="otro">Otro</option>
               </select>
             </div>
-            
+
             <div class="form-field full-width">
               <label class="form-label">Describa su Caso</label>
-              <textarea class="contact-textarea" placeholder="Proporcione detalles específicos sobre su situación legal..." required=""></textarea>
+              <textarea class="contact-textarea" id="contactDescription" placeholder="Proporcione detalles específicos sobre su situación legal..." required=""></textarea>
             </div>
           </div>
           
@@ -1171,7 +1197,7 @@
   </footer>
 
   <!-- WHATSAPP FLOTANTE -->
-  <a href="http://wa.me/573157984808?text=Hola,%20quisiera%20una%20consulta%20legal%20gratuita" class="whatsapp-float" target="_blank">
+  <a href="http://wa.me/573157984808?text=Hola,%20quisiera%20una%20consulta%20legal" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
 
@@ -1299,9 +1325,9 @@
         <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 10px; font-size: 0.9rem;">
           <p style="margin-bottom: 0.5rem;"><strong>IMPORTANTE:</strong></p>
           <p>Esta es una evaluación preliminar basada en criterios legales generales. Cada caso tiene particularidades específicas que solo pueden determinarse en consulta presencial con análisis detallado de documentos y hechos.</p>
-          <div style="margin-top: 1rem; padding: 0.75rem; background: var(--color-gold); color: var(--color-dark); border-radius: 8px; text-align: center; font-weight: 600;">
-            📞 AGENDE SU CONSULTA PRESENCIAL GRATUITA
-          </div>
+          <a href="http://wa.me/573157984808?text=Hola,%20realicé%20la%20evaluación%20preliminar%20en%20su%20página%20web%20y%20quisiera%20agendar%20una%20consulta%20presencial%20para%20analizar%20mi%20caso." target="_blank" style="display: block; margin-top: 1rem; padding: 0.75rem; background: var(--color-gold); color: var(--color-dark); border-radius: 8px; text-align: center; font-weight: 600; text-decoration: none; cursor: pointer;">
+            📞 AGENDE SU CONSULTA PRESENCIAL
+          </a>
         </div>
       `;
       
@@ -1313,7 +1339,28 @@
     // FORMULARIO DE CONTACTO
     document.getElementById('contactForm').addEventListener('submit', (e) => {
       e.preventDefault();
-      alert('Gracias por su consulta. Nos pondremos en contacto con usted dentro de 24 horas.');
+
+      // Capturar datos del formulario
+      const nombre = document.getElementById('contactName').value;
+      const telefono = document.getElementById('contactPhone').value;
+      const email = document.getElementById('contactEmail').value;
+      const tipo = document.getElementById('contactType').value;
+      const descripcion = document.getElementById('contactDescription').value;
+
+      // Mapear tipo de consulta a texto legible
+      const tipoTexto = {
+        'administrativo': 'Derecho Administrativo',
+        'civil': 'Responsabilidad Civil',
+        'electoral': 'Derecho Electoral',
+        'otro': 'Otro'
+      }[tipo] || tipo;
+
+      // Crear mensaje para WhatsApp
+      const mensaje = `Hola, solicito una consulta. Mis datos: Nombre: ${nombre}, Teléfono: ${telefono}, Email: ${email}, Tipo de consulta: ${tipoTexto}, Descripción del caso: ${descripcion}`;
+
+      // Redireccionar a WhatsApp
+      const whatsappUrl = `http://wa.me/573157984808?text=${encodeURIComponent(mensaje)}`;
+      window.open(whatsappUrl, '_blank');
     });
 
     // SMOOTH SCROLL PARA ENLACES
