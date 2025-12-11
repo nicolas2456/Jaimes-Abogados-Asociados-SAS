@@ -309,6 +309,17 @@
       margin-top: var(--spacing-lg);
     }
 
+    /* Centrar la última tarjeta cuando hay 4 miembros */
+    .team-card:nth-child(4) {
+      grid-column: 2 / 3;
+    }
+
+    @media (max-width: 1200px) and (min-width: 769px) {
+      .team-card:nth-child(4) {
+        grid-column: auto;
+      }
+    }
+
     /* TARJETA DE EQUIPO ÚNICA */
     .team-card {
       background: var(--color-white);
@@ -994,7 +1005,7 @@
   <!-- HERO SECTION -->
   <section class="hero" id="inicio">
     <div class="hero-container">
-      <h1 class="hero-title">Abogados Especialistas en Derecho Administrativo en Bucaramanga - 45+ Años de Experiencia</h1>
+      <h1 class="hero-title">Abogados Especialistas en Derecho Administrativo en Colombia - 45+ Años de Experiencia</h1>
       <p class="hero-subtitle">Especialistas en Derecho Administrativo y Responsabilidad Civil en Bucaramanga, Santander</p>
       
       <div class="stats-grid">
@@ -1210,8 +1221,8 @@
   <!-- CASOS DE ÉXITO -->
   <section class="section success-cases" id="casos">
     <div class="container">
-      <h2 class="section-title fade-in visible">Casos de Éxito en Derecho Administrativo - Bucaramanga</h2>
-      <p class="section-subtitle fade-in visible">Resultados exitosos en demandas administrativas y responsabilidad civil que respaldan nuestra experiencia</p>
+      <h2 class="section-title fade-in visible">200+ Casos Exitosos - Resultados que Respaldan Nuestra Experiencia</h2>
+      <p class="section-subtitle fade-in visible">Más de 200 casos ganados en demandas administrativas y responsabilidad civil en toda Colombia</p>
       
       <div class="cases-grid">
         <div class="case-card fade-in visible">
@@ -1274,6 +1285,9 @@
           </div>
           <h4>Teléfonos</h4>
           <p>315-798-4808<br>(607) 684-4632</p>
+          <a href="tel:+573157984808" style="display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background: var(--color-primary); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);">
+            📞 Llamar Ahora
+          </a>
         </div>
         
         <div class="info-card fade-in visible">
