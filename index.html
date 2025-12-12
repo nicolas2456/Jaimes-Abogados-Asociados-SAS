@@ -940,14 +940,14 @@
     /* HERO LOGO SECTION */
     .hero-logo-section {
       text-align: center;
-      margin-bottom: var(--spacing-lg);
+      margin-bottom: var(--spacing-xl);
     }
 
     .hero-logo {
-      height: 120px;
+      height: 200px;
       width: auto;
       margin-bottom: var(--spacing-md);
-      filter: brightness(0) invert(1);
+      filter: brightness(0) invert(1) drop-shadow(0 4px 8px rgba(0,0,0,0.3));
     }
 
     .company-name {
@@ -960,13 +960,28 @@
       line-height: 1.2;
     }
 
+    /* Responsive para tablet */
+    @media (max-width: 1024px) {
+      .hero-logo {
+        height: 160px;
+      }
+    }
+
+    /* Responsive para móvil */
     @media (max-width: 768px) {
       .hero-logo {
-        height: 80px;
+        height: 140px;
       }
 
       .company-name {
         font-size: 1.75rem;
+      }
+    }
+
+    /* Para móviles muy pequeños */
+    @media (max-width: 480px) {
+      .hero-logo {
+        height: 120px;
       }
     }
 
