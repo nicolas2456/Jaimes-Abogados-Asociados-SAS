@@ -937,6 +937,39 @@
       text-justify: inter-word;
     }
 
+    /* HERO LOGO SECTION */
+    .hero-logo-section {
+      text-align: center;
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .hero-logo {
+      height: 120px;
+      width: auto;
+      margin-bottom: var(--spacing-md);
+      filter: brightness(0) invert(1);
+    }
+
+    .company-name {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--color-white);
+      margin-bottom: var(--spacing-sm);
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      line-height: 1.2;
+    }
+
+    @media (max-width: 768px) {
+      .hero-logo {
+        height: 80px;
+      }
+
+      .company-name {
+        font-size: 1.75rem;
+      }
+    }
+
     /* SECCIÓN TRAYECTORIA */
     .trajectory-section {
       background: var(--color-white);
@@ -1057,8 +1090,11 @@
   <!-- HERO SECTION -->
   <section class="hero" id="inicio">
     <div class="hero-container">
-      <h1 class="hero-title">Especialistas en Derecho Administrativo y Responsabilidad Civil a Nivel Nacional</h1>
-      <p class="hero-subtitle">Defendiendo sus derechos con más de 45 años de experiencia en todo el territorio colombiano</p>
+      <div class="hero-logo-section">
+        <img src="https://i.imgur.com/GlKESrv.png" alt="Jaimes Abogados Asociados SAS" class="hero-logo">
+        <h1 class="company-name">Jaimes Abogados Asociados S.A.S</h1>
+        <p class="hero-subtitle">Especialistas en Derecho Administrativo y Responsabilidad Civil a nivel nacional</p>
+      </div>
 
       <div class="stats-grid">
         <div class="stat-card">
