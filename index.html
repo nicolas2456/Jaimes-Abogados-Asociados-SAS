@@ -103,25 +103,9 @@
       margin: 0 auto;
       padding: 0 var(--spacing-sm);
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      height: 120px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
-    
-    .logo img {
-      height: 100px;
-      width: auto;
-      transition: transform 0.3s ease;
-    }
-    
-    .logo:hover img {
-      transform: scale(1.05);
+      height: 80px;
     }
 
     .nav-menu {
@@ -211,42 +195,6 @@
       margin-bottom: var(--spacing-md);
       opacity: 0.9;
       font-weight: 300;
-    }
-
-    /* ESTADÍSTICAS ÚNICAS DEL DESPACHO */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: var(--spacing-md);
-      margin: var(--spacing-lg) 0;
-    }
-
-    .stat-card {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      padding: var(--spacing-md);
-      border-radius: 15px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .stat-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    }
-
-    .stat-number {
-      font-family: var(--font-display);
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--color-gold);
-      display: block;
-    }
-
-    .stat-label {
-      font-size: 0.9rem;
-      opacity: 0.9;
-      margin-top: var(--spacing-xs);
     }
 
     .cta-primary {
@@ -798,19 +746,15 @@
     /* RESPONSIVE */
     @media (max-width: 768px) {
       .nav-container {
-        height: 100px;
-      }
-
-      .logo img {
         height: 80px;
       }
 
       .nav-menu {
         position: fixed;
-        top: 100px;
+        top: 80px;
         right: -100%;
         width: 100%;
-        height: calc(100vh - 100px);
+        height: calc(100vh - 80px);
         background: white;
         flex-direction: column;
         justify-content: flex-start;
@@ -843,7 +787,7 @@
         background-size: cover;
         background-position: center 20%;
         background-attachment: scroll;
-        padding: calc(100px + var(--spacing-lg)) var(--spacing-sm) var(--spacing-lg);
+        padding: calc(80px + var(--spacing-lg)) var(--spacing-sm) var(--spacing-lg);
         min-height: 80vh;
       }
 
@@ -855,11 +799,7 @@
       .hero-title {
         font-size: 2.5rem;
       }
-      
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      
+
       .team-grid {
         grid-template-columns: 1fr;
       }
@@ -893,11 +833,6 @@
 
       .hero-subtitle {
         font-size: 1rem;
-      }
-
-      .stats-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
       }
     }
 
@@ -944,45 +879,43 @@
     }
 
     .hero-logo {
-      height: 300px;
+      height: 400px;
       width: auto;
-      margin-bottom: var(--spacing-lg);
-      filter: brightness(0) invert(1) drop-shadow(0 6px 12px rgba(0,0,0,0.4));
+      margin-bottom: var(--spacing-sm);
+      filter: brightness(0) invert(1) drop-shadow(0 8px 16px rgba(0,0,0,0.5));
     }
 
-    .company-name {
-      margin-top: var(--spacing-md);
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 700;
+    .hero-subtitle {
+      margin-top: 0;
+      margin-bottom: var(--spacing-lg);
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 400;
       color: var(--color-white);
-      margin-bottom: var(--spacing-sm);
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-      line-height: 1.2;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.4;
     }
 
     /* Responsive para tablet */
     @media (max-width: 1024px) {
       .hero-logo {
-        height: 250px;
+        height: 320px;
       }
     }
 
     /* Responsive para móvil */
     @media (max-width: 768px) {
       .hero-logo {
-        height: 200px;
-      }
-
-      .company-name {
-        font-size: 1.75rem;
+        height: 280px;
       }
     }
 
     /* Para móviles muy pequeños */
     @media (max-width: 480px) {
       .hero-logo {
-        height: 160px;
+        height: 220px;
       }
     }
 
@@ -1087,9 +1020,6 @@
   <!-- HEADER -->
   <header class="header" id="header">
     <nav class="nav-container">
-      <a href="#" class="logo">
-        <img src="https://i.imgur.com/GlKESrv.png" alt="Jaimes Abogados Asociados SAS - Abogados Bucaramanga Derecho Administrativo">
-      </a>
       <ul class="nav-menu">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#equipo">Equipo</a></li>
@@ -1108,23 +1038,7 @@
     <div class="hero-container">
       <div class="hero-logo-section">
         <img src="https://i.imgur.com/GlKESrv.png" alt="Jaimes Abogados Asociados SAS" class="hero-logo">
-        <h1 class="company-name">Jaimes Abogados Asociados S.A.S</h1>
         <p class="hero-subtitle">Especialistas en Derecho Administrativo y Responsabilidad Civil a nivel nacional</p>
-      </div>
-
-      <div class="stats-grid">
-        <div class="stat-card">
-          <span class="stat-number">45+</span>
-          <span class="stat-label">Años de Experiencia</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-number">16</span>
-          <span class="stat-label">Años como Conjuez</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-number">100%</span>
-          <span class="stat-label">Compromiso</span>
-        </div>
       </div>
 
       <a href="#contacto" class="cta-primary">
