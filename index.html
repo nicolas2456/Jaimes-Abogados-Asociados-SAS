@@ -553,6 +553,23 @@
       font-size: 0.9rem;
     }
 
+    .case-details {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    .case-details li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(196, 30, 58, 0.1);
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .case-details li:last-child {
+      border-bottom: none;
+    }
+
     /* FORMULARIO DE CONTACTO LEGAL */
     .contact-form {
       background: var(--color-white);
@@ -1190,42 +1207,54 @@
 
         <div class="cases-grid">
           <div class="case-card fade-in visible">
-            <div class="case-category">Reparación Directa</div>
-            <h4 class="case-title"><strong>Por muertes, heridas o daños causados a personas o bienes por acciones militares, de policía, funcionarios públicos o con bienes del Estado. Por accidentes de tránsito con ocasión de derrumbes o deficiente señalización. Responsabilidad en servicio militar obligatorio, omisión en operativos, errores en la fuerza pública, lesión de conscriptos</strong></h4>
+            <div class="case-category">REPARACIÓN DIRECTA</div>
+            <h4 class="case-title">Reparación Directa</h4>
+            <ul class="case-details">
+              <li>Por muertes, heridas o daños causados a personas o bienes por acciones militares, de policía, funcionarios públicos o con bienes del Estado</li>
+              <li>Por accidentes de tránsito con ocasión de derrumbes o deficiente señalización</li>
+              <li>Responsabilidad en servicio militar obligatorio</li>
+              <li>Omisión en operativos</li>
+              <li>Errores en la fuerza pública</li>
+              <li>Lesión de conscriptos</li>
+            </ul>
           </div>
 
           <div class="case-card fade-in visible">
-            <div class="case-category">Derecho Administrativo</div>
+            <div class="case-category">DERECHO ADMINISTRATIVO</div>
             <h4 class="case-title">Nulidad Electoral</h4>
             <p class="case-result">Alcaldes de Floridablanca, Sabana y San Gil</p>
           </div>
 
           <div class="case-card fade-in visible">
-            <div class="case-category">Errores de Fuerza Pública</div>
+            <div class="case-category">ERRORES DE FUERZA PÚBLICA</div>
             <h4 class="case-title">Errores de fuerza pública</h4>
             <p class="case-result">Múltiples procesos exitosos</p>
           </div>
 
           <div class="case-card fade-in visible">
-            <div class="case-category">Responsabilidad Médica</div>
-            <h4 class="case-title">Por inadecuada atención médico hospitalaria - Negligencia médica</h4>
+            <div class="case-category">RESPONSABILIDAD MÉDICA</div>
+            <h4 class="case-title">Responsabilidad Médica</h4>
+            <ul class="case-details">
+              <li>Por inadecuada atención médico hospitalaria</li>
+              <li>Negligencia médica</li>
+            </ul>
             <p class="case-result">Procesos resueltos favorablemente con indemnización</p>
           </div>
 
           <div class="case-card fade-in visible">
-            <div class="case-category">Privación Injusta</div>
+            <div class="case-category">PRIVACIÓN INJUSTA</div>
             <h4 class="case-title">Privación injusta de la libertad y errores judiciales</h4>
             <p class="case-result">Reparación integral por errores judiciales</p>
           </div>
 
           <div class="case-card fade-in visible">
-            <div class="case-category">En Proceso</div>
+            <div class="case-category">EN PROCESO</div>
             <h4 class="case-title">Demandas de nulidad y restablecimiento por desvinculación de personal (reestructuraciones)</h4>
             <p class="case-result">Múltiples procesos en curso a nivel nacional</p>
           </div>
 
           <div class="case-card fade-in visible">
-            <div class="case-category">En Trámite</div>
+            <div class="case-category">EN TRÁMITE</div>
             <h4 class="case-title">Contratación pública y acciones de repetición</h4>
             <p class="case-result">Gestiones actuales ante entidades del Estado</p>
           </div>
