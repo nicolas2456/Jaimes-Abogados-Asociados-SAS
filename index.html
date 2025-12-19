@@ -888,7 +888,33 @@
       }
 
       /* BOTONES Y CTAs MÓVIL */
-      .cta-primary, .submit-btn, .calculate-btn {
+      .cta-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--spacing-xs);
+        background: var(--color-primary);
+        color: var(--color-white);
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        margin: var(--spacing-md) auto;
+        max-width: 280px;
+        width: auto;
+        text-align: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 25px rgba(196, 30, 58, 0.3);
+      }
+
+      .cta-primary:hover {
+        background: var(--color-secondary);
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(196, 30, 58, 0.4);
+      }
+
+      .submit-btn, .calculate-btn {
         padding: 1rem 1.5rem;
         font-size: 1rem;
         min-height: 48px;
@@ -1047,6 +1073,17 @@
       text-align: justify;
       text-justify: inter-word;
       color: var(--color-gray);
+    }
+    /* CENTRAR TARJETA DE GINDY EN PC */
+    @media (min-width: 1025px) {
+      .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      
+      .team-card:nth-child(4) {
+        grid-column: 2;
+        justify-self: center;
+      }
     }
 
     /* TRATAMIENTO DE DATOS */
