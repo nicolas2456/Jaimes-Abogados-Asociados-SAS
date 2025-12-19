@@ -248,21 +248,25 @@
       margin-right: auto;
     }
 
+    /* GRID DEL EQUIPO - TODOS VISIBLES */
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: var(--spacing-lg);
       margin-top: var(--spacing-lg);
     }
 
-    /* Centrar la última tarjeta cuando hay 4 miembros */
-    .team-card:nth-child(4) {
-      grid-column: 2 / 3;
+    /* Tablet: dos columnas */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
-    @media (max-width: 1200px) and (min-width: 769px) {
-      .team-card:nth-child(4) {
-        grid-column: auto;
+    /* Desktop: auto-fit responsive */
+    @media (min-width: 1025px) {
+      .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       }
     }
 
@@ -800,6 +804,7 @@
         z-index: 1000;
       }
 
+      /* HERO OPTIMIZADO MÓVIL */
       .hero {
         background-size: cover;
         background-position: center 20%;
@@ -813,20 +818,109 @@
         padding: 0 1rem;
       }
 
+      .hero-subtitle {
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 0 1rem;
+      }
+
       .hero-title {
         font-size: 2.5rem;
       }
 
+      /* EQUIPO - TODOS VISIBLES EN MÓVIL */
       .team-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-md);
       }
-      
+
+      .team-card {
+        width: 100%;
+        margin: 0 auto var(--spacing-md) auto;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: var(--spacing-md);
+      }
+
+      .member-name {
+        font-size: 1.2rem;
+      }
+
+      .member-description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      /* GRIDS GENERALES */
       .contact-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
       }
-      
+
       .areas-grid {
         grid-template-columns: 1fr;
+      }
+
+      /* CASOS REPRESENTATIVOS MÓVIL */
+      .cases-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+      }
+
+      .case-card {
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .case-details li {
+        font-size: 0.85rem;
+        padding: 0.4rem 0;
+      }
+
+      /* CALCULADORA MÓVIL */
+      .calculator-form {
+        padding: var(--spacing-md);
+        margin: 0 1rem;
+      }
+
+      .form-select, .form-input, .contact-input, .contact-select, .contact-textarea {
+        font-size: 16px; /* Evita zoom en iOS */
+        padding: 0.8rem;
+      }
+
+      /* BOTONES Y CTAs MÓVIL */
+      .cta-primary, .submit-btn, .calculate-btn {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        min-height: 48px;
+        width: 100%;
+        margin: 1rem 0;
+      }
+
+      /* NAVEGACIÓN MÓVIL MEJORADA */
+      .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 2rem 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        z-index: 999;
+      }
+
+      .nav-menu a {
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      /* WHATSAPP FLOAT MÓVIL */
+      .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 56px;
+        height: 56px;
       }
     }
 
